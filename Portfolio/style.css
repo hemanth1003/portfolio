@@ -1,0 +1,197 @@
+body{
+    height: 200vh;
+    background-color: black;
+    margin: 0%;
+    padding: 0%;
+    color: orange;
+    position: relative;
+    overflow-x:auto;
+}
+.navbar{
+    height: 75px;
+    background-color: aqua;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aqua;
+    cursor: pointer;
+}
+.navleft .logo{
+    height: 40px;
+    padding-left: 50px;
+}
+  .navleft .logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:black;
+    animation: show 1s ease forwards;
+    animation-delay: .4s;
+}
+.navright .ele{
+    cursor: pointer;
+    margin: 20px;
+    padding-right: 50px;
+    text-decoration: none;
+    color: orange;
+}
+.ele:hover{
+    cursor: pointer;
+    color: white;
+    transform: 1.5s;
+}
+.home{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-between;
+    height: 85vh;
+    font-size: 20px;
+}
+.home-right{
+    display: grid;
+    justify-content: center;
+    width: 50vw;
+    padding-right: 150px;
+}
+.home-left{
+    padding-top: 250px;
+    padding-left: 100px;
+    width: 50vw;
+    text-align: left;
+    color: white;
+}
+.home-right .image{
+    height: 600px;
+}
+.home-left h1{
+    font-family: 'DM Serif Display', serif;
+    font-size: 50px;
+}
+.home-left h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    color: orange;
+}
+.home p{
+    margin: 20px 0 40px;
+    font-family: 'Caveat', cursive;
+}
+.home-left .btn{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+}
+ .home-left .btn a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+    background: orange;
+    border: 2px solid orange;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s ;
+}
+ .btn a:nth-child(1):hover{
+    color: orange;
+}
+.btn a:nth-child(2){
+    background: transparent;
+    color: orange;
+}
+.btn a:nth-child(2):hover{
+    color: black ;
+}
+.btn a:nth-child(2)::before{
+    background: orange;
+}
+.btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0 ;
+    height: 100%;
+    color: black;
+    background:black;
+    z-index: -1;
+    transition: .5s;
+}
+.btn a:hover:before{
+     width: 100%;
+}
+.btn a:nth-child(1){
+    color: black;
+}
+.icon{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 100px;
+    width: 170px;
+}
+.icon a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid orange;
+    border-radius: 50%;
+    font-size: 19px;
+    color: orange;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s ;
+}
+.icon a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: black;
+     background:orange;
+    z-index: -1;
+    transition: .5s;
+}
+.icon a:hover:before{
+    width: 100%;
+}
+.icon a:hover{
+    color: black;
+}
+.home-right .image:hover{
+    color: black;
+    opacity: .5;
+
+}
+
+
+/*animation keyframes*/
+   @keyframes showRight{
+        100%{
+            width: 0;
+        }
+    }
