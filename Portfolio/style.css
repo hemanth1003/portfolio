@@ -1,11 +1,19 @@
 body{
-    height: 200vh;
+    height: 1000vh;
     background-color: black;
     margin: 0%;
     padding: 0%;
     color: orange;
     position: relative;
     overflow-x:auto;
+    background-size: cover;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 .navbar{
     height: 75px;
@@ -34,10 +42,12 @@ body{
 }
 .navright .ele{
     cursor: pointer;
-    margin: 20px;
-    padding-right: 50px;
+    margin: 10px;
+    padding: 30px;
     text-decoration: none;
     color: orange;
+    font-size: 20px;
+    transition: all 0.7s ease;
 }
 .ele:hover{
     cursor: pointer;
@@ -185,10 +195,109 @@ body{
 .home-right .image:hover{
     color: black;
     opacity: .5;
-
+    transition: all .5s ease-in-out;
+}
+.about{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-between;
+    height: 85vh;
+    font-size: 20px;
+    padding-top: 350px;
+}
+.about-right{
+    
+    display: grid;
+    justify-content: center;
+    width: 50vw;
+    padding-right: 150px;
+}
+.about-left{
+    padding-left: 100px;
+    width: 50vw;
+    text-align: left;
+    color: white;
+}
+.about-left .image{
+    height: 600px;
+}
+.about-left .image2{
+    height: 600px;
+    position: absolute;
+    left: 0;
+    padding-left: 100px;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+.about-left .image2:hover{
+    opacity: 1;
+}
+.about-right p{
+    margin: 20px 0 40px;
+    font-family: 'Caveat',;
+    color: white;
+    line-height: 30px;
+}
+.about-right h2{
+    cursor: default;
+    font-size: 100px;
+    font-family: 'Abril Fatface', serif;
+    padding-top:200px;
+}
+.about-right h2:hover{
+    color: white;
+    transition: all 0.5s ease-in;
+}
+.services {
+   display: flex;
+   padding: 350px;
+   text-align: center;
+   justify-content: space-around;
+}
+.services h1{
+    font-size: 70px;
+}
+.services-subcnt{
+    display: flex;
+    flex-direction: row;
+}
+.serv-card h2{
+    font-size: 40px;
+    color: black;
+}
+.serv-card p{
+    color: black;
+    text-align: left;
+}
+.serv-card{
+    border: 2px solid black;
+    border-radius:  10px; 
+    backdrop-filter: blur(10px);
+    margin: 10px;
+    padding: 50px;
+    justify-content: space-around;
+    background-image:linear-gradient(90deg ,white,black)  ;
+}
+.wave  {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
+.wave  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 220px;
+}
 
+.wave .shape-fill {
+    fill: orange;
+}
 /*animation keyframes*/
    @keyframes showRight{
         100%{
